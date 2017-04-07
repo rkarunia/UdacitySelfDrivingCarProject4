@@ -60,14 +60,15 @@ Without sliding windows:
 ![alt text](images/NoSlidingWindows.png)
 
 #### 5. Curvature measurement
-The code for measuring curvature is in code cell 27.
+The code for measuring curvature, lane center and vehicle distance from lane center is in code cell 21.
 
-#### 6. Sample image with lane highlighted
-The code to draw line on the frame is in code cell 28-29.
+#### 6. Sample image with lane highlighted and annotated with lane curvature and vehicle distance from center
+The function to draw line on the frame is in code cell 28-30.  
+The code to draw line on sample images is in code cell 35.
 ![alt text](images/LaneDetectedSampleImages.png)
 
 #### 7. Final Pipeline Step
-The code for pipeline function is in code cell 31, 32, 33.  
+The code for pipeline function is in code cell 32, 33, 34.  
 
 1. Undistort, threshold and perspective transform the image
 2. If there is no history (or first frame), find lane line with sliding windows
@@ -98,3 +99,8 @@ Here's a [link to my video result](./project_video_out.mp4)
 #### 1. Briefly discuss any problems / issues you faced in your implementation of this project.  Where will your pipeline likely fail?  What could you do to make it more robust?
 One of the most important step in this project is the thresholding of the image. The pipeline is likely to fail where the contrast between the line and the road are not good or covered by shadows, etc. For improvement, need to find a thresholding method that produce clear lines so that the lanes can be detected with more confidence.
 The sanity checks can be improved, although for this project they work pretty well.
+
+
+```python
+
+```
